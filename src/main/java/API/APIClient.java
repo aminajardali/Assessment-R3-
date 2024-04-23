@@ -1,2 +1,4 @@
-package API;public class APIClient {
+package API;
+
+public class APIClient {
 }

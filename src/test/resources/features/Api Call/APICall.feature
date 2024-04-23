@@ -1,13 +1,18 @@
-Feature: Search by keyword
+Feature: Validate API response and structure
 
-  @green
-  Scenario: Searching for 'green'
-    Given Sergey is researching things on the internet
-    When he looks up "green"
-    Then he should see information about "green"
+  Scenario: API call is successful and returns a valid price
+    Given the API is available
+    When I request the current price
+    Then the API call should be successful
+    And the response should include a valid price
 
-  @red
-  Scenario: Searching for 'red'
-    Given Sergey is researching things on the internet
-    When he looks up "red"
-    Then he should see information about "red"
+  Scenario: API response status code and status check
+    Given the API is available
+    When I request the current price
+    Then the API response should return a status code of 200
+    And the API response status should be "success"
+
+  Scenario: Validate API response JSON schema
+    Given the API is available
+    When I request the current price
+    Then the API response should match the defined JSON schema

@@ -1,2 +1,4 @@
-package utils;public class JsonSchemaValidator {
+package utils;
+
+public class JsonSchemaValidator {
 }
