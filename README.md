@@ -32,45 +32,45 @@ src/
 
 
 ## The sample scenario
-Feature: Validate API response and structure
+-Feature: Validate API response and structure
 
-  Scenario: API call is successful and returns a valid price
+  .Scenario: API call is successful and returns a valid price
     Given the API is available
     When I request the current price
     Then the API call should be successful
     And the response should include a valid price
 
-  Scenario: API response status code and status check
+  .Scenario: API response status code and status check
     Given the API is available
     When I request the current price
     Then the API response should return a status code of 200
     And the API response status should be "success"
 
-  Scenario: Validate API response JSON schema
+  .Scenario: Validate API response JSON schema
     Given the API is available
     When I request the current price
     Then the API response should match the defined JSON schema
 
 
-Feature: Currency conversion rate accuracy
+-Feature: Currency conversion rate accuracy
 
-  Scenario: Fetch USD price against AED and check range
+  .Scenario: Fetch USD price against AED and check range
     Given the API is available
     When I fetch the conversion rate for USD to AED
     Then the conversion rate should be between 3.6 and 3.7
     
 
-Feature: Validate number of currency pairs returned
+-Feature: Validate number of currency pairs returned
 
-  Scenario: Verify the number of currency pairs
+  .Scenario: Verify the number of currency pairs
     Given the API is available
     When I request the list of all currency pairs
     Then the API should return exactly 162 currency pairs
     
 
-Feature: API response time validation
+-Feature: API response time validation
 
-  Scenario: Verify API response time
+  .Scenario: Verify API response time
     Given the API is available
     When I request any data
     Then the response time should not be more than 3 seconds from the request time
@@ -121,7 +121,11 @@ https://www.exchangerate-api.com/docs/free
 ## Testing Results
 
 ![image](https://github.com/aminajardali/Assessment-R3-/assets/167747357/8098a9c0-678c-4bb5-827d-c0cd4f61524c)
+![image](https://github.com/aminajardali/Assessment-R3-/assets/167747357/49f95abd-3624-48ee-bd7f-2019c23e7334)
 
+
+## Contact Information
+For further inquiries or support, please contact the project maintainers at amina.jardali@digitalchain.tech 
 
 
 
